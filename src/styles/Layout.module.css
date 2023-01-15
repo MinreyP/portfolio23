@@ -1,0 +1,118 @@
+/* Desktop Header */
+.header {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.header svg {
+  width: 24px;
+  height: 24px;
+}
+
+.brand {
+  padding: 0;
+  cursor: pointer;
+}
+
+.brand,
+.navInfos {
+  flex: 1 0 25%;
+}
+
+.navMain {
+  flex: 1 0 50%;
+}
+
+.brand h1 {
+  font-size: 2.625rem;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.brand h3 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.navMain ul,
+.navInfos ul {
+  display: flex;
+}
+
+.navMain ul {
+  justify-content: center;
+  align-items: center;
+}
+
+.navMain .link {
+  display: inline-block;
+  font-size: 1.25rem;
+  text-align: center;
+  font-weight: 600;
+  margin: 0 1.25rem;
+  padding-bottom: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.navMain .link::before {
+  content: '';
+  position: absolute;
+  transition: transform .5s ease;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: white;
+  transform: translateX(-100%);
+}
+
+.navMain .link:hover::before {
+  transform: translateX(0);
+}
+
+.navMain .link.active::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: white;
+  left: 0;
+  bottom: 0;
+}
+
+.navInfos ul {
+  justify-content: end;
+  align-items: center;
+}
+
+.navDesktop {
+  display: flex;
+  justify-content: center;
+}
+
+.langSwitcher {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.langSwitcher div {
+  display: inline-block;
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 0 .4rem;
+  opacity: .6;
+}
+
+.langSwitcher .active {
+  opacity: 1;
+}
+
+.navInfos .mobileNav {
+  display: none;
+}
