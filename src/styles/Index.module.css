@@ -10,3 +10,62 @@
     background-repeat: no-repeat;
     z-index: -1;
 }
+
+.marquee {
+    --gap: 1rem;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+    margin-top: 60vh;
+}
+
+.marquee_content {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: var(--gap);
+    min-width: 100%;
+    color: white;
+    font-size: 6rem;
+    font-weight: 700;
+    animation: scroll 30s linear infinite;
+}
+
+.decoDot {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 0 .2rem;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - var(--gap)));
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .marquee_content {
+        font-size: 3rem;
+    }
+
+    .decoDot {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .marquee__content {
+        animation-play-state: paused !important;
+    }
+}
