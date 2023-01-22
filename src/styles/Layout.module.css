@@ -6,6 +6,8 @@
   justify-content: space-between;
   align-items: center;
   color: #fff;
+  position: relative;
+  z-index: 5;
 }
 
 .header svg {
@@ -62,7 +64,7 @@
 .navMain .link::before {
   content: '';
   position: absolute;
-  transition: transform .5s ease;
+  transition: transform .35s ease;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -113,6 +115,134 @@
   opacity: 1;
 }
 
-.navInfos .mobileNav {
+.headerBurger {
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+  width: 24px;
+  height: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+}
+
+.headerBurger>div {
+  position: relative;
+  flex: none;
+  width: 100%;
+  height: 3px;
+  background: white;
+  transition: all .4s var(--easing);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerBurger>div::before,
+.headerBurger>div::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: inherit;
+  transition: all .4s var(--easing);
+}
+
+.headerBurger>div::after {
+  top: -8px;
+}
+
+.headerBurger>div::before {
+  top: 8px;
+}
+
+.headerBurger.active>div {
+  transform: rotate(135deg);
+}
+
+.headerBurger.active>div::before,
+.headerBurger.active>div::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+.headerBurger.active>div::after {
+  opacity: 0;
+}
+
+.mobileMenuWrapper {
+  background: var(--black);
+  color: white;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
   display: none;
+  transform: translateY(-100%);
+  transition: transform .35s var(--easing);
+}
+
+.mobileMenuWrapper.active {
+  transform: translateY(0);
+}
+
+.mobileNav {
+  width: 100%;
+  margin: 50% auto;
+  padding: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.mobileNav li {
+  padding: .2rem 0;
+}
+
+.mobileNav .link {
+  text-decoration: underline;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 2rem;
+}
+
+.socialLinks li:not(li:first-child) {
+  margin-left: .8rem;
+}
+
+.socialLinks svg {
+  margin-right: .5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .brand h1 {
+    font-size: 1.8rem;
+  }
+
+  .brand h3 {
+    font-size: .85rem;
+  }
+
+  .navMain {
+    display: none;
+  }
+
+  .langSwitcher div {
+    font-size: 1rem;
+  }
+
+  .mobileMenuWrapper {
+    display: block;
+  }
 }
