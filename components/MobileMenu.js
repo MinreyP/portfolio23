@@ -1,3 +1,4 @@
+import navLinks from '../src/utils/navLinks';
 import style from '../src/styles/Layout.module.css';
 import { SiGithub, SiLinkedin } from "react-icons/si";
 
@@ -6,10 +7,14 @@ const MobileMenu = ({ active }) => {
         <div className={active ? `${style.mobileMenuWrapper} ${style.active}` : (style.mobileMenuWrapper)}>
             <nav className={style.mobileNav}>
                 <ul>
-                    <li><a href="#" className={`${style.link}`}>Home</a></li>
-                    <li><a href="/work" className={`${style.link}`}>Work</a></li>
-                    <li><a href="/resume" className={`${style.link}`}>Resume</a></li>
-                    <li><a href="/contact" className={`${style.link}`}>Contact</a></li>
+                    {
+                        navLinks.map((link, i) => {
+                            let { path } = link;
+                            return (
+                                <li><a href={path} className={style.link}>{link.title}</a></li>
+                            )
+                        })
+                    }
                 </ul>
                 <ul className={style.socialLinks}>
                     <li><a href="https://github.com/MinreyP" target="_blank"><SiGithub />Github</a></li>

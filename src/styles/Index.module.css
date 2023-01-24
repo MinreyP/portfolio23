@@ -8,7 +8,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    z-index: -1;
+    z-index: 1;
 }
 
 .marquee {
@@ -19,6 +19,7 @@
     user-select: none;
     gap: var(--gap);
     margin-top: 60vh;
+    z-index: 2;
 }
 
 .marquee_content {
