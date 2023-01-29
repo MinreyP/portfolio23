@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import { useState, useEffect } from "react";
+import { useSiteContext } from '../src/pages/api/siteContext'
 import navLinks from '../src/utils/navLinks';
 import { HiTranslate } from "react-icons/hi";
 import MobileMenu from "./MobileMenu";
@@ -7,8 +8,8 @@ import styles from "../src/styles/Layout.module.css";
 
 const Header = () => {
     const { route } = useRouter();
-    const [mbMenu, setMbmenu] = useState(false);
     const [color, setColor] = useState('');
+    const { siteLang, mbMenu, toggleMobileMenu, switchLang } = useSiteContext();
 
     const defineHeaderColor = () => {
         if (route === "/") {
@@ -21,10 +22,6 @@ const Header = () => {
     useEffect(() => {
         defineHeaderColor();
     });
-
-    const toggleMobileMenu = () => {
-        setMbmenu(!mbMenu);
-    }
 
     return (
         <>
@@ -54,8 +51,14 @@ const Header = () => {
                     <ul>
                         <li className={styles.langSwitcher}>
                             <HiTranslate />
-                            <div className={`${styles.langEn} ${styles.active}`}>EN</div>
-                            <div className={styles.langTc}>TC</div>
+                            {siteLang === 'en'
+                                ? <div className={styles.active}
+                                    onClick={() => { switchLang('en') }}>EN</div>
+                                : <div onClick={() => { switchLang('en') }}>EN</div>}
+                            {siteLang === 'tc'
+                                ? <div className={styles.active}
+                                    onClick={() => { switchLang('en') }}>TC</div>
+                                : <div onClick={() => { switchLang('tc') }}>TC</div>}
                         </li>
                         <div onClick={() => toggleMobileMenu()}
                             className={mbMenu ? `${styles.headerBurger} ${styles.active}` : (styles.headerBurger)}>

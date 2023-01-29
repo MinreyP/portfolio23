@@ -1,7 +1,9 @@
+import { useRouter } from 'next/router';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 const layout = ({ children }) => {
+    const { route } = useRouter();
 
     return (
         <>
@@ -9,7 +11,9 @@ const layout = ({ children }) => {
             <main>
                 {children}
             </main>
-            <Footer />
+            {
+                route !== '/' && <Footer />
+            }
         </>
     );
 };

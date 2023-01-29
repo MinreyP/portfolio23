@@ -1,20 +1,29 @@
 import styles from "../src/styles/Work.module.css"
 
-const Card = () => {
+const Card = ({ info }) => {
+    const websiteURL = info.work.quick_links.official_web;
+    const trimURL = websiteURL.replace(/(https*:\W*)?\//gm, '');
+
     return (
         <div className={styles.card}>
             <div className={styles.cardContent}>
                 <div className={styles.category}>
-                    <p>Shopify Development</p>
+                    <p>{info.work.category.name}</p>
                 </div>
                 <div className={styles.title}>
-                    <a href="#"><p>Grassphere Shopify Store</p></a>
+                    <a href={`/work/${info.work.page_slug}`}><p>{info.name}</p></a>
                 </div>
                 <div className={styles.website}>
-                    <p>shop.grassphere.com</p>
+                    <p>{trimURL}</p>
                 </div>
                 <div className={styles.tags}>
-                    <p><span>#vuejs</span><span>#shopify</span><span>#liquid</span></p>
+                    <p>
+                        {
+                            info.work.tags.map((tag, i) => {
+                                return <span key={i}>#{tag}</span>
+                            })
+                        }
+                    </p>
                 </div>
             </div>
         </div>
