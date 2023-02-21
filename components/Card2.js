@@ -11,13 +11,11 @@ const Card2 = ({ info }) => {
     const projectName = getTranslate(name_translation, siteLang);
 
     return (
-        <div className={styles.otherWork}>
-            <div className={styles.item}>
-                <a href={`/work/${page_slug}`} className={styles.cover}>
-                    <Image src={urlFor(info.hero_img).url()} fill={true} unoptimized={true} alt={projectName} />
-                </a>
-                <h6>{projectName}</h6>
-            </div>
+        <div className={styles.item}>
+            <a href={`/work/${page_slug}`} className={styles.cover}>
+                <Image src={urlFor(info.hero_img).url()} fill={true} unoptimized={true} alt={projectName} />
+            </a>
+            <h6>{projectName}</h6>
         </div>
     );
 };

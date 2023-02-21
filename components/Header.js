@@ -1,6 +1,7 @@
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
-import { useSiteContext } from '../src/pages/api/siteContext'
+import { useSiteContext } from '../src/pages/api/siteContext';
+import { getTranslate } from "../src/pages/api/getTranslate";
 import navLinks from '../src/utils/navLinks';
 import { HiTranslate } from "react-icons/hi";
 import MobileMenu from "./MobileMenu";
@@ -19,6 +20,16 @@ const Header = () => {
         }
     }
 
+    const handleCLick = (e) => {
+        let activeLink = e.target;
+        let allLinks = Array.from(document.querySelectorAll('#main-nav .link'));
+
+        allLinks.forEach(link => {
+            link.classList.remove('active');
+        })
+        activeLink.classList.add('active');
+    }
+
     useEffect(() => {
         defineHeaderColor();
     });
@@ -30,17 +41,21 @@ const Header = () => {
                     <h1>MONKHAUS</h1>
                     <h3>A Minrey Peng's Portfolio</h3>
                 </a>
-                <nav className={styles.navMain}>
+                <nav className={styles.navMain} id="main-nav">
                     <ul>
                         {
                             navLinks.map((link, i) => {
                                 let { path } = link;
+                                let linkTitle = siteLang == 'en' ? link.titleEn : link.titleTC;
                                 if (path === route) {
                                     return (
-                                        <li key={i}><a href={path} className={`${styles.link} ${styles.active}`}>{link.title}</a></li>)
+                                        <li key={i}><a href={link.path} onClick={(e) => handleCLick(e)}
+                                            className={`${styles.link} ${styles.active}`}>{linkTitle}</a></li>
+                                    )
                                 } else {
                                     return (
-                                        <li key={i}><a href={path} className={styles.link}>{link.title}</a></li>
+                                        <li key={i}><a href={link.path} onClick={(e) => handleCLick(e)}
+                                            className={`${styles.link}`}>{linkTitle}</a></li>
                                     )
                                 }
                             })

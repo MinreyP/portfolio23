@@ -4,7 +4,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: url(../../public/home-bg.png);
+    background-image: url(../../public/portfolio23-cover-pc.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -62,6 +62,10 @@
     .decoDot {
         width: 10px;
         height: 10px;
+    }
+
+    .cover {
+        background: url(../../public/portfolio23-cover-mobile.png);
     }
 }
 

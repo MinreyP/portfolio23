@@ -1,8 +1,11 @@
 import navLinks from '../src/utils/navLinks';
+import { useSiteContext } from '../src/pages/api/siteContext';
 import style from '../src/styles/Layout.module.css';
 import { SiGithub, SiLinkedin } from "react-icons/si";
 
 const MobileMenu = ({ active }) => {
+    let { siteLang } = useSiteContext();
+
     return (
         <div className={active ? `${style.mobileMenuWrapper} ${style.active}` : (style.mobileMenuWrapper)}>
             <nav className={style.mobileNav}>
@@ -10,8 +13,9 @@ const MobileMenu = ({ active }) => {
                     {
                         navLinks.map((link, i) => {
                             let { path } = link;
+                            let linkTitle = siteLang == 'en' ? link.titleEn : link.titleTC;
                             return (
-                                <li><a href={path} className={style.link}>{link.title}</a></li>
+                                <li key={i}><a href={path} className={style.link}>{linkTitle}</a></li>
                             )
                         })
                     }

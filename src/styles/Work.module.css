@@ -115,7 +115,7 @@
         display: inline-flex;
         width: 100%;
         gap: 2.5rem;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: flex-start;
         flex-wrap: wrap;
         margin-top: 3rem;
@@ -240,7 +240,7 @@
     display: inline-flex;
     gap: 1.5rem;
     justify-self: center;
-    align-items: center;
+    align-items: stretch;
     flex-wrap: wrap;
 }
 

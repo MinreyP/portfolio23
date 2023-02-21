@@ -52,7 +52,7 @@ const workDetail = ({ details }) => {
                 <a href="/work" className={styles.infoBtn}>
                     <HiOutlineArrowNarrowLeft />
                     {
-                        siteLang === 'en' ? <span>Back To All Works</span> :
+                        siteLang === 'en' ? <span>Back To Showcase</span> :
                             <span>返回所有作品</span>
                     }
                 </a>
@@ -124,13 +124,23 @@ const workDetail = ({ details }) => {
                 }
             </Swiper>
             <div className="container">
-                <h5 className={styles.subtitle}>Other Works</h5>
+                <h5 className={styles.subtitle}>All Works In the Category</h5>
                 {
-                    otherWorks.length === 0 && <h6>I'm working on it...</h6>
+                    otherWorks === null && <h6>I'm working on it...</h6>
                 }
                 {
-                    otherWorks.length > 0 && otherWorks.map(work => <Card2 info={work} key={work._id} />)
+                    otherWorks !== null &&
+                    <div className={styles.otherWork}>
+                        {otherWorks.map(work => <Card2 info={work} key={work._id} />)}
+                    </div>
                 }
+                <a href="/work" className={styles.infoBtn}>
+                    <HiOutlineArrowNarrowLeft />
+                    {
+                        siteLang === 'en' ? <span>Back To Showcase</span> :
+                            <span>返回所有作品</span>
+                    }
+                </a>
             </div>
         </>
     );
