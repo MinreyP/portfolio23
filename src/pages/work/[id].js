@@ -41,8 +41,6 @@ const workDetail = ({ details }) => {
         return urlFor(img).url()
     })
 
-    console.log(category);
-
     return (
         <>
             <FsLightbox
@@ -116,7 +114,7 @@ const workDetail = ({ details }) => {
             >
                 {
                     gallerySources.map((img, i) => {
-                        return (<SwiperSlide onClick={() => setToggler(!toggler)}>
+                        return (<SwiperSlide key={i} onClick={() => setToggler(!toggler)}>
                             <Image
                                 src={img} fill={true} alt={`${projectName}-gallery-${i}`} unoptimized={true} />
                         </SwiperSlide>)
