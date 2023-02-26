@@ -12,7 +12,6 @@ export const ContextWrapper = ({ children }) => {
 
     const switchLang = (lang) => {
         setSiteLang(lang);
-        console.log('Lang has been change to' + lang);
     }
 
     return (

@@ -5,7 +5,6 @@ import { urlFor } from "../lib/imageBuilder";
 import styles from "../src/styles/Work.module.css";
 
 const Card2 = ({ info }) => {
-    console.log(info);
     const { siteLang } = useSiteContext();
     const { page_slug, name_translation } = info;
     const projectName = getTranslate(name_translation, siteLang);
