@@ -1,7 +1,7 @@
 :root {
   --max-width: 1100px;
   --border-radius: 16px;
-  --font-stacks: 'Source Sans Pro', 'Noto Sans TC', 'system-ui', sans-serif;
+  /* --font-stacks: 'Source Sans Pro', 'Noto Sans TC', 'system-ui', sans-serif; */
   --black: #373636;
   --light-grey: #EBEBEB;
   --dark-grey: #c9c8c9;

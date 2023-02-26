@@ -1,7 +1,20 @@
 import Head from 'next/head';
 import Layout from "../../components/layout"
 import '../styles/globals.css';
+import { Source_Sans_Pro, Noto_Sans_TC } from '@next/font/google';
 import { ContextWrapper } from './api/siteContext';
+
+const sourceSans = Source_Sans_Pro({
+    weight: ['400', '600', '700', '900'],
+    style: ['normal', 'italic'],
+    subsets: ['latin']
+})
+
+const notoSans = Noto_Sans_TC({
+    weight: ['300', '400', '500', '700'],
+    styles: ["normal"],
+    subsets: ["latin"]
+})
 
 const _app = ({ Component, pageProps }) => {
     return (
@@ -11,10 +24,13 @@ const _app = ({ Component, pageProps }) => {
                 <meta name="description"
                     content="Minrey is a Taipei-based visual designer/web developer who is always up for an adventure. This site showcases their curated works for potential collaboration opportunities in the future." />
                 <link rel="icon" href="/favicon.ico" />
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-                <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Source+Sans+Pro:wght@400;600;700;900&display=swap" rel="stylesheet" />
             </Head>
+            <style jsx global>{`
+               :root {
+                    --font-stacks: ${sourceSans.style.fontFamily}, ${notoSans.style.fontFamily}, 'stystem-ui', sans-serif;
+               }
+            `}
+            </style>
             <ContextWrapper>
                 <Layout>
                     <Component {...pageProps} />
