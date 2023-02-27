@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Layout from "../../components/layout"
+import Layout from "../../components/Layout"
 import '../styles/globals.css';
 import { Source_Sans_Pro, Noto_Sans_TC } from '@next/font/google';
 import { ContextWrapper } from './api/siteContext';
