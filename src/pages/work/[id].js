@@ -122,7 +122,11 @@ const workDetail = ({ details }) => {
                 }
             </Swiper>
             <div className="container">
-                <h5 className={styles.subtitle}>All Works In the Category</h5>
+                <h5 className={styles.subtitle}>
+                    {
+                        siteLang == 'en' ? 'All Works In the Category' : '此類別中的其他作品'
+                    }
+                </h5>
                 {
                     otherWorks === null && <h6>I'm working on it...</h6>
                 }

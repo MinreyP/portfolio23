@@ -259,6 +259,11 @@
     .otherWork .item {
         flex: 1 0 90%;
     }
+
+    .subtitle {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
 }
 
 .item .cover {
