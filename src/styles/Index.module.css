@@ -4,7 +4,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: url(../../public/portfolio23-cover-pc.png);
+    background-image: url(../../public/portfolio23-cover-pc-02.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -65,7 +65,7 @@
     }
 
     .cover {
-        background: url(../../public/portfolio23-cover-mobile.png);
+        background: url(../../public/portfolio23-cover-mobile-02.jpg);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
