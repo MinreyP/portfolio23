@@ -7,7 +7,8 @@ import { ContextWrapper } from './api/siteContext';
 const sourceSans = Source_Sans_Pro({
     weight: ['400', '600', '700', '900'],
     style: ['normal', 'italic'],
-    subsets: ['latin']
+    subsets: ['latin'],
+    display: 'block'
 })
 
 const notoSans = Noto_Sans_TC({
