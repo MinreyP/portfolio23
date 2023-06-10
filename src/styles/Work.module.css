@@ -116,7 +116,7 @@
         width: 100%;
         gap: 2.5rem;
         justify-content: flex-start;
-        align-items: flex-start;
+        align-items: stretch;
         flex-wrap: wrap;
         margin-top: 3rem;
     }

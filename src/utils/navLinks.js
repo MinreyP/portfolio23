@@ -10,6 +10,11 @@ const navLinks = [
         titleTC: '作品展示'
     },
     {
+        path: 'https://github.com/MinreyP',
+        titleEn: 'Github',
+        titleTC: 'Github'
+    },
+    {
         path: 'https://www.linkedin.com/in/minrey-peng/',
         titleEn: 'LinkedIn',
         titleTC: '個人檔案'
@@ -20,35 +25,5 @@ const navLinks = [
         titleTC: '聯絡我'
     }
 ];
-// const navLinks = [
-//     {
-//         path: '/',
-//         title: {
-//             en: 'Home',
-//             tc: '首頁'
-//         }
-//     },
-//     {
-//         path: 'https://www.linkedin.com/in/minrey-peng/',
-//         title: {
-//             en: 'LinkedIn',
-//             tc: '個人檔案'
-//         }
-//     },
-//     {
-//         path: '/work',
-//         title: {
-//             en: 'Showcase',
-//             tc: '作品展示'
-//         }
-//     },
-//     {
-//         path: 'mailto:minreypeng@gmail.com',
-//         title: {
-//             en: 'Contact',
-//             tc: '聯絡我'
-//         }
-//     }
-// ];
 
 export default navLinks;

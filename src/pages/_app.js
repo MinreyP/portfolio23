@@ -8,13 +8,16 @@ const sourceSans = Source_Sans_Pro({
     weight: ['400', '600', '700', '900'],
     style: ['normal', 'italic'],
     subsets: ['latin'],
+    preload: true,
     display: 'block'
 })
 
 const notoSans = Noto_Sans_TC({
-    weight: ['300', '400', '500', '700'],
+    weight: ['400', '500', '700'],
     styles: ["normal"],
-    subsets: ["latin"]
+    subsets: ["latin"],
+    preload: false,
+    display: 'swap'
 })
 
 const _app = ({ Component, pageProps }) => {

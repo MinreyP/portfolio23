@@ -10,9 +10,9 @@ const Card = ({ info }) => {
                 <div className={styles.category}>
                     <p>{info.work.category.name}</p>
                 </div>
-                <div className={styles.title}>
-                    <a href={`/work/${info.work.page_slug}`}><p>{info.name}</p></a>
-                </div>
+                <a className={styles.title} href={`/work/${info.work.page_slug}`}>
+                    <p>{info.name}</p>
+                </a>
                 <div className={styles.website}>
                     <p>{trimURL}</p>
                 </div>
