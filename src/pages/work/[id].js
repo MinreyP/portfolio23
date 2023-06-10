@@ -10,6 +10,7 @@ import { HiOutlineArrowNarrowLeft } from "react-icons/hi";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import FsLightbox from "fslightbox-react";
+import { motion } from "framer-motion";
 
 const workDetail = ({ details }) => {
     const [toggler, setToggler] = useState(false);
@@ -46,7 +47,16 @@ const workDetail = ({ details }) => {
             <FsLightbox
                 toggler={toggler}
                 sources={gallerySources} />
-            <div className="container">
+            <motion.div
+                initial={{ opacity: 0, y: "20%" }}
+                animate={{ opacity: 1, y: "0" }}
+                transition={{
+                    duration: 1.5,
+                    delay: 0.2,
+                    type: "spring",
+                    stiffness: 50
+                }}
+                className="container">
                 <a href="/work" className={styles.infoBtn}>
                     <HiOutlineArrowNarrowLeft />
                     {
@@ -54,8 +64,26 @@ const workDetail = ({ details }) => {
                             <span>返回所有作品</span>
                     }
                 </a>
-                <h1 className={styles.pageTitle}>{projectName}</h1>
-                <p>{shortDescript}</p>
+                <motion.h1
+                    initial={{ opacity: 0, y: "20%" }}
+                    animate={{ opacity: 1, y: "0" }}
+                    transition={{
+                        duration: 1.5,
+                        delay: 0.4,
+                        type: "spring",
+                        stiffness: 40
+                    }}
+                    className={styles.pageTitle}>{projectName}</motion.h1>
+                <motion.p
+                    initial={{ opacity: 0, y: "20%" }}
+                    animate={{ opacity: 1, y: "0" }}
+                    transition={{
+                        duration: 1.5,
+                        delay: 0.8,
+                        type: "spring",
+                        stiffness: 40
+                    }}
+                >{shortDescript}</motion.p>
                 <div className={styles.workHero}>
                     <Image
                         alt={`${projectName}-hero-image`}
@@ -94,7 +122,7 @@ const workDetail = ({ details }) => {
                         </ul>
                     </div>
                 </div>
-            </div>
+            </motion.div>
             <Swiper
                 spaceBetween={50}
                 breakpoints={{

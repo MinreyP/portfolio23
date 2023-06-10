@@ -1,17 +1,45 @@
 import { client } from "../../lib/client"
 import styles from "../styles/Work.module.css";
 import Card from "../../components/Card";
+import { motion } from "framer-motion";
 
 const work = ({ selectedWorks }) => {
 
     return (
-        <div className="container">
-            <h1 className={styles.pageTitle}>WORK
+        <motion.div
+            initial={{ opacity: 0, x: "20%" }}
+            animate={{ opacity: 1, x: "0" }}
+            transition={{
+                duration: 3,
+                delay: 0.3,
+                type: "spring",
+                stiffness: 80
+            }}
+            className="container">
+            <motion.h1
+                initial={{ opacity: 0, x: "20%" }}
+                animate={{ opacity: 1, x: "0" }}
+                transition={{
+                    duration: 3,
+                    delay: 0.5,
+                    type: "spring",
+                    stiffness: 70
+                }}
+                className={styles.pageTitle}>WORK
                 {
                     selectedWorks ? <span className={styles.workNum}>0{selectedWorks.length}</span> : ''
                 }
-            </h1>
-            <p>These are selected from recent works</p>
+            </motion.h1>
+            <motion.p
+                initial={{ opacity: 0, x: "20%" }}
+                animate={{ opacity: 1, x: "0" }}
+                transition={{
+                    duration: 3,
+                    delay: 0.6,
+                    type: "spring",
+                    stiffness: 70
+                }}>
+                These are selected from recent works</motion.p>
             {
                 selectedWorks.length > 0 &&
                 <div className={styles.cardContainer}>
@@ -22,7 +50,7 @@ const work = ({ selectedWorks }) => {
                     }
                 </div>
             }
-        </div>
+        </motion.div>
     );
 };
 
