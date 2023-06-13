@@ -1,0 +1,135 @@
+.cvOuter {
+    margin: 5rem auto;
+    width: 8.5in;
+    height: 12in;
+    padding: .4in;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 3px 8px -3px rgba(0, 0, 0, .5);
+}
+
+.cvContent {
+    display: grid;
+    gap: 0;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        "basicInfo basicInfo"
+        "shortDesc shortDesc"
+        "leftCol rightCol";
+}
+
+.cvContent li {
+    padding: .1em 0;
+}
+
+.basicInfo {
+    grid-area: basicInfo;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.skillsBlock ul,
+.eduBlock ul,
+.langBlock ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    padding-left: .5em;
+}
+
+.skillsBlock li,
+.eduBlock li,
+.langBlock li {
+    position: relative;
+}
+
+.skillsBlock li:after,
+.eduBlock li:after,
+.langBlock li:after {
+    content: "•";
+    display: block;
+    width: 3px;
+    height: 3px;
+    color: rgba(0, 0, 0, .5);
+    position: absolute;
+    left: -0.45em;
+    top: 0.1em;
+}
+
+.skillsBlock li,
+.eduBlock li,
+.langBlock li {
+    padding-right: .6em;
+}
+
+.workExpBlock {
+    padding-left: 1rem;
+}
+
+.workExpBlock li {
+    position: relative;
+}
+
+.workExpBlock ul {
+    padding-left: .6em;
+    margin-bottom: 1rem;
+}
+
+.workExpBlock li:before {
+    content: "•";
+    width: 5px;
+    height: 5px;
+    color: rgba(0, 0, 0, .5);
+    position: absolute;
+    left: -0.6em;
+    top: 0.1em;
+}
+
+.workExpBlock i {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.nameTitle h2 {
+    font-size: 2rem;
+}
+
+.nameTitle h3 {
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, .5);
+}
+
+.contactInfo {
+    font-size: .9rem;
+}
+
+.shortDesc {
+    grid-area: shortDesc;
+    padding: 1.8rem 0;
+}
+
+.leftCol {
+    grid-area: leftCol;
+}
+
+.rightCol {
+    grid-area: rightCol;
+}
+
+.blockTitle {
+    font-size: 1.4rem;
+    margin-bottom: .2em;
+}
+
+.blockSubTitle {
+    font-size: 1.15rem;
+}
+
+.workExpBlock .blockSubTitle span {
+    font-size: .8rem;
+    font-weight: 400;
+    margin-left: .5rem;
+}
