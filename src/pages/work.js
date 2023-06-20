@@ -67,6 +67,7 @@ export async function getStaticProps() {
     return {
         props: {
             selectedWorks
-        }
-    };
+        },
+        revalidate: 10,
+    }
 }
