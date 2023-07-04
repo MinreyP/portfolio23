@@ -137,7 +137,7 @@ a img {
     visibility: hidden;
   }
 
-  .print-ele {
+  #print-ele {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -147,11 +147,11 @@ a img {
     bottom: 0;
     padding: 0;
     margin: 0 auto;
-    box-shadow: none !important;
+    box-shadow: none;
     visibility: visible;
   }
 
-  .print-ele * {
+  #print-ele * {
     visibility: visible;
   }
 }

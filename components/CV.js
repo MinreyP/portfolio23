@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const CV = () => {
     return (
-        <div className={`${styles.cvOuter} print-ele`}>
+        <div className={styles.cvOuter} id="print-ele">
             <div className={styles.cvContent}>
                 <div className={styles.basicInfo}>
                     <article className={styles.nameTitle}>
@@ -15,6 +15,7 @@ const CV = () => {
                         <li><a href="mailto:minreypeng@gmail.com">minreypeng@gmail.com</a></li>
                         <li><a href="https://www.linkedin.com/in/minrey-peng/" target="_new">linkedin.com/in/minrey-peng/</a></li>
                         <li><a href="https://github.com/MinreyP" target="_new">github.com/MinreyP</a></li>
+                        <li><b>Visa: Canada Open Work Permit (1 Year)</b></li>
                     </ul>
                 </div>
                 <article className={styles.shortDesc}>
@@ -30,27 +31,18 @@ const CV = () => {
                         </h5>
                         <ul>
                             <li>HTML/CSS/JS</li>
+                            <li>Figma</li>
                             <li>React.js</li>
                             <li>Next.js </li>
                             <li>Git</li>
+                            <li>Webpack</li>
                             <li>Shopify Liquid</li>
+                            <li>Framer</li>
                             <li>WordPress</li>
                             <li>Express.js</li>
                             <li>Node.js</li>
                             <li>GraphQL</li>
                             <li>MongoDB</li>
-                        </ul>
-                        <h5 className={styles.blockSubTitle}>
-                            Tools
-                        </h5>
-                        <ul>
-                            <li>VS code</li>
-                            <li>Figma</li>
-                            <li>Adobe Creative Suite</li>
-                            <li>Slack</li>
-                            <li>Basecamp</li>
-                            <li>Github</li>
-                            <li>Google Suite</li>
                         </ul>
                         <h5 className={styles.blockSubTitle}>
                             Collaborative
@@ -72,9 +64,9 @@ const CV = () => {
                     <article className={styles.eduBlock}>
                         <h4 className={styles.blockTitle}>Education</h4>
                         <h5 className={styles.blockSubTitle}>
-                            Hsuan Chuang University
+                            B.A in Visual Communication Design
                         </h5>
-                        <p>B.A in Visual Communication Design</p>
+                        <p>Hsuan Chuang University</p>
                         <i>Sep 2008 - May 2011</i>
                         <ul>
                             <li>Web Design</li>
@@ -90,23 +82,23 @@ const CV = () => {
                             <span>Shopify Partner Taiwan</span>
                         </h5>
                         <h5 className={styles.blockSubTitle}>Front-end Developer</h5>
-                        <i>May 2022 - present</i>
+                        <i>Taipei, Taiwan. May 2022 - June 2023</i>
                         <ul>
                             <li>
                                 Employed clean and scalable coding practices to enhance code quality and facilitate maintenance using Liquid, JS, React
                             </li>
                             <li>
-                                Modularized custom features to optimize website functionality and user experience
+                                Increased enterprise-level client base by 20% through successful client engagement and project delivery
                             </li>
                             <li>
-                                Increased enterprise-level client base by 20% through successful client engagement and project delivery
+                                Modularized custom features to optimize website functionality and user experience
                             </li>
                         </ul>
                         <h5 className={styles.blockSubTitle}>AVerMedia
                             <span>Consumer Electronics</span>
                         </h5>
                         <h5 className={styles.blockSubTitle}>Web Designer, Front-end Developer</h5>
-                        <i>July 2021 - April 2022</i>
+                        <i>Taipei, Taiwan. July 2021 - April 2022</i>
                         <ul>
                             <li>
                                 Collaborated with cross-functional teams to develop and implement effective product page strategies that accurately communicated the unique selling points of the products
@@ -119,7 +111,7 @@ const CV = () => {
                             <span>International Luxury Real Estate</span>
                         </h5>
                         <h5 className={styles.blockSubTitle}>Web Designer, Front-end Developer</h5>
-                        <i>July 2020 - July 2021</i>
+                        <i>Taipei, Taiwan. July 2020 - July 2021</i>
                         <ul>
                             <li>
                                 Designed high-quality email templates and landing pages to showcase new property listings and effectively engage target audiences by using Figma, HTML, CSS and Jquery
@@ -129,6 +121,19 @@ const CV = () => {
                             </li>
                             <li>
                                 Utilize WordPress expertise to maintain and update the company's website
+                            </li>
+                        </ul>
+                        <h5 className={styles.blockSubTitle}>DealBerry
+                            <span>D2C eCommerce</span>
+                        </h5>
+                        <h5 className={styles.blockSubTitle}>Lead Visual Designer</h5>
+                        <i>Manchester, UK and Remote. Jun 2018 - Apr 2022</i>
+                        <ul>
+                            <li>
+                                Played a pivotal role in repositioning the company's brand image by closely managing the quality and consistency of all visual materials, including packaging, photography, and other marketing collateral
+                            </li>
+                            <li>
+                                Successfully boosted sales by 15% through the implementation of highly effective and visually appealing design strategies that effectively communicated the brand's unique value proposition to target audiences
                             </li>
                         </ul>
                     </article>
