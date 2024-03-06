@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #fff;
+  color: var(--jet-black);
   position: relative;
   z-index: 5;
 }
@@ -72,8 +72,8 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 2px;
-  background: white;
+  height: 3px;
+  background: var(--catchy-color);
   transform: translateX(-101%);
 }
 
@@ -85,8 +85,8 @@
   content: '';
   position: absolute;
   width: 100%;
-  height: 2px;
-  background: white;
+  height: 3px;
+  background: var(--catchy-color);
   left: 0;
   bottom: 0;
 }
@@ -146,20 +146,20 @@
   flex: none;
   width: 100%;
   height: 3px;
-  background: white;
+  background: var(--jet-black);
   transition: all .4s var(--easing);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.header.dark .headerBurger>div {
-  background: var(--black);
+/* .header.dark .headerBurger>div {
+  background: var(--jet-black);
 }
 
 .header .headerBurger.active>div {
-  background: white;
-}
+  background: var(--jet-black)
+} */
 
 .headerBurger>div::before,
 .headerBurger>div::after {
@@ -202,8 +202,8 @@
 }
 
 .mobileMenuWrapper {
-  background: var(--black);
-  color: white;
+  background: var(--kraft);
+  color: var(--jet-black);
   width: 100%;
   height: 100vh;
   position: absolute;

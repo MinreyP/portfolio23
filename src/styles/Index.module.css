@@ -4,7 +4,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: url(../../public/portfolio23-cover-pc-02.jpg);
+    background-image: url(../../public/portfolio-cover-pc-24.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -18,7 +18,7 @@
     overflow: hidden;
     user-select: none;
     gap: var(--gap);
-    margin-top: 60vh;
+    margin-top: 65vh;
     z-index: 2;
 }
 
@@ -29,7 +29,7 @@
     align-items: center;
     gap: var(--gap);
     min-width: 100%;
-    color: white;
+    color: var(--catchy-color);
     font-size: 6rem;
     font-weight: 700;
     animation: scroll 30s linear infinite;
@@ -39,7 +39,7 @@
     display: block;
     width: 16px;
     height: 16px;
-    background-color: white;
+    background-color: var(--catchy-color);
     border-radius: 50%;
     margin: 0 .2rem;
 }
@@ -55,8 +55,12 @@
 }
 
 @media screen and (max-width: 768px) {
+    .marquee {
+        margin-top: 0;
+    }
+
     .marquee_content {
-        font-size: 3rem;
+        font-size: 5rem;
     }
 
     .decoDot {
@@ -65,7 +69,7 @@
     }
 
     .cover {
-        background: url(../../public/portfolio23-cover-mobile-02.jpg);
+        background: url(../../public/portfolio-cover-mobile-24.jpg);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;

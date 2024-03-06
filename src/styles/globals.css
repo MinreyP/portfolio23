@@ -1,11 +1,12 @@
 :root {
   --max-width: 1100px;
   --border-radius: 16px;
-  /* --font-stacks: 'Source Sans Pro', 'Noto Sans TC', 'system-ui', sans-serif; */
   --black: #373636;
+  --jet-black: #0a0a0a;
   --light-grey: #EBEBEB;
   --dark-grey: #c9c8c9;
   --kraft: #F3EDE0;
+  --catchy-color: #adff6b;
   --easing: cubic-bezier(.4, 0, 0, 1);
 }
 
