@@ -15,7 +15,6 @@ const CV = () => {
                         <li><a href="mailto:minreypeng@gmail.com">minreypeng@gmail.com</a></li>
                         <li><a href="https://www.linkedin.com/in/minrey-peng/" target="_new">linkedin.com/in/minrey-peng/</a></li>
                         <li><a href="https://github.com/MinreyP" target="_new">github.com/MinreyP</a></li>
-                        <li><b>Visa: Canada Open Work Permit (1 Year)</b></li>
                     </ul>
                 </div>
                 <article className={styles.shortDesc}>
