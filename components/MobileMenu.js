@@ -22,7 +22,7 @@ const MobileMenu = ({ active }) => {
                 </ul>
                 <ul className={style.socialLinks}>
                     <li><a href="https://github.com/MinreyP" target="_blank"><SiGithub />Github</a></li>
-                    <li><a href="https://www.linkedin.com/in/minrey-peng/" target="_blank"><SiLinkedin />LinkedIn</a></li>
+                    <li><a href="https://www.linkedin.com/in/minreypeng/" target="_blank"><SiLinkedin />LinkedIn</a></li>
                 </ul>
             </nav>
         </div>

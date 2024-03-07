@@ -77,7 +77,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .marquee__content {
+    .marquee_content {
         animation-play-state: paused !important;
     }
 }
