@@ -55,9 +55,9 @@
 }
 
 @media screen and (max-width: 768px) {
-    .marquee {
+    /* .marquee {
         margin-top: 0;
-    }
+    } */
 
     .marquee_content {
         font-size: 5rem;

@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import { useSiteContext } from '../src/pages/api/siteContext';
-import { getTranslate } from "../src/pages/api/getTranslate";
 import navLinks from '../src/utils/navLinks';
 import { HiTranslate } from "react-icons/hi";
 import MobileMenu from "./MobileMenu";
