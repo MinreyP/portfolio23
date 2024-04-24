@@ -36,7 +36,7 @@ const about = ({ content }) => {
         <>
             <div className={styles.container}>
                 <h2 className={styles.title}>{aboutTitle}</h2>
-                <p>{aboutLocation}</p>
+                <p>✨A Bilingual Fluent in Visual and Programming Languages</p>
                 <article className={styles.desc}>
                     {
                         sortedBlocks.map((block, i) => {
