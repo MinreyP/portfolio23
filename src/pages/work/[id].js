@@ -204,6 +204,13 @@ export async function getStaticProps({ params }) {
         `
     )
 
+    // Handle case where no work is found
+    if (!details) {
+        return {
+            notFound: true
+        }
+    }
+
     return {
         props: { details },
         revalidate: 10,
