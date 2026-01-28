@@ -2,7 +2,7 @@ import styles from "../src/styles/Work.module.css"
 
 const Card = ({ info }) => {
     const websiteURL = info.work.quick_links.official_web;
-    const trimURL = websiteURL.replace(/(https*:\W*)?\//gm, '');
+    const trimURL = websiteURL.replace(/^https?:\/\//, '');
 
     return (
         <div className={styles.card}>

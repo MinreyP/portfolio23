@@ -209,6 +209,7 @@
 
 .stack {
     grid-area: stack;
+    height: fit-content;
 }
 
 .quickLinks {
