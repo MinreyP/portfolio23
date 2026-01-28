@@ -58,7 +58,7 @@ export default work;
 
 export async function getStaticProps() {
     const selectedWorks = await client.fetch(`
-    *[_type == "selected_works"]{
+    *[_type == "selected_works"]|order(_createdAt desc){
         name, _id,
         work->{tags, page_slug, quick_links,client,category->{name}}
     }
